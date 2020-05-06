@@ -427,25 +427,25 @@
       </div>
       <div class="row">
         <div class="col-lg-12">
-          <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" novalidate="novalidate">
+          <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" >
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <input class="form-control"  placeholder="Your Name" type="text" name="name" required="required" data-validation-required-message="Please enter your name."/>
+                  <input class="form-control"  placeholder="Your Name" type="text" name="name" required oninvalid="this.setCustomValidity('Please enter your name!')" oninput="this.setCustomValidity('')" />
                   <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group">
-                  <input class="form-control" id="email" placeholder="Your Email Address" type="email" name="email" required="required" data-validation-required-message="Please enter your email address."/>
+                  <input class="form-control" id="email" placeholder="Your Email Address" type="email" name="email" required oninvalid="this.setCustomValidity('Please enter valid email!')" oninput="this.setCustomValidity('')" />
                   <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group">
-                  <input class="form-control" id="phone" type="tel" placeholder="Your 10 digit Phone number"  name="phone"  pattern="[0-9]{10}" required="required" data-validation-required-message="Please enter your phone number."/>
+                  <input class="form-control" id="phone" type="tel" placeholder="Your 10 digit Mobile number"  name="phone"  pattern="[789][0-9]{9}" required oninvalid="this.setCustomValidity('Please enter valid 10 digit mobilr number!')" oninput="this.setCustomValidity('')" />
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <textarea id="message" class="form-control" name="message" placeholder="Your Message" required="required" data-validation-required-message="Please enter your message."></textarea>
+                  <textarea id="message" class="form-control" name="message" placeholder="Your Message" required oninvalid="this.setCustomValidity('Please enter valid message!')" oninput="this.setCustomValidity('')" />
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
